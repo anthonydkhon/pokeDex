@@ -1,6 +1,10 @@
 .App-header {
   background-color: #d41d1d;
   min-height: 300px;
+  
+}
+
+.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,8 +13,23 @@
   color: white;
 }
 
+.headerInput {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+}
 
-.Pokemon-list {
+.pokeSearch {
+  margin-top: .3em;
+  margin-right: 1em;
+}
+
+.dropDown {
+  margin-right: 1em;
+}
+
+.Pokemon-list,
+.moreStats {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -18,7 +37,8 @@
   text-align: center;
 }
 
-.pokeimg {
+.pokeimg,
+.pokeStatsImg {
 max-width: 50%;
 max-height: 50%;
 margin: 0 auto;
@@ -31,5 +51,16 @@ margin: 0 auto;
 .pokecard {
   height: 300px;
   width: 300px;
+  margin: 0;
+}
+
+.pokeStats {
+  list-style: none;
+  text-align: center;
+}
+
+.statCard {
+  height: 500px;
+  width: 500px;
   margin: 0;
 }
