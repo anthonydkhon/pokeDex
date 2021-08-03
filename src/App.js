@@ -4,6 +4,7 @@ import DropDownMenu from './components/dropdown';
 import { useState, useEffect } from "react";
 import { react } from '@babel/types';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { Button } from 'reactstrap';
 
 
 function App() {
@@ -39,13 +40,15 @@ function App() {
     })
   }
 
+  const reset = () => {
+    fetchPokemon().then((data) => setPokemon(data.pokemon));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Pokedex</h1>
-        <p>
-          Gotta catch 'em all!
-        </p>
+      <a href="/"><img src="https://fontmeme.com/permalink/210802/7bbb60fb4fb7570eb56c7c884bd45176.png" alt="pokemon-font" border="0" /></a>
+      <img src="https://fontmeme.com/permalink/210802/3a80161d3bdb3c6fed36cfc667dc2fbc.png" alt="pokemon-font" border="0" />
       <div className="pokeSearch">
           <input 
           type="text" 
@@ -56,6 +59,7 @@ function App() {
           aria-label="Search for a Pokemon">
           </input> 
         <DropDownMenu handleClick={handleClick} />
+        <Button onClick={reset}>Reset</Button>
         </div>
       </header>
       <div>

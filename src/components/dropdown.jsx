@@ -25,7 +25,7 @@ const DropDownMenu = (props) => {
         <DropdownItem value="Ground" onClick={props.handleClick}>Ground</DropdownItem>
         <DropdownItem value="Ice" onClick={props.handleClick}>Ice</DropdownItem>
         <DropdownItem value="Normal" onClick={props.handleClick}>Normal</DropdownItem>
-        <DropdownItem value="Posion" onClick={props.handleClick}>Poison</DropdownItem>
+        <DropdownItem value="Poison" onClick={props.handleClick}>Poison</DropdownItem>
         <DropdownItem value="Psychic" onClick={props.handleClick}>Psychic</DropdownItem>
         <DropdownItem value="Rock" onClick={props.handleClick}>Rock</DropdownItem>
         <DropdownItem value="Water" onClick={props.handleClick}>Water</DropdownItem>

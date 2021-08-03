@@ -5,10 +5,13 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import '../App.css';
+import moreData from "./moreData"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 function Pokemon(props) {
 
   return (
+    <Router>
     <div className="Pokemon-list align-items-start">
         {props.pokemon.map((pokemon) => (
             <Col sm={12} md ={4} lg={2}>
@@ -18,14 +21,20 @@ function Pokemon(props) {
           <CardTitle>{pokemon.name}</CardTitle>
           <CardSubtitle>No. {pokemon.num}</CardSubtitle>
           <CardText>
-            Type: {pokemon.type[0]}
+            Type: {pokemon.type.join(" / ")}
           </CardText>
-          <Button>More Data</Button>
+          <Link to={{
+            pathname: moreData,
+            state: {pokemon}
+          }}>
+            <Button>More Data</Button>
+          </Link>
         </CardBody>
       </Card>
       </Col>
         ))}
     </div>
+    </Router>
     );
 }
 
