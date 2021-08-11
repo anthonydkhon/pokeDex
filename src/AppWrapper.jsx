@@ -3,7 +3,7 @@ import Pokemon from './components/pokemoncard'
 import DropDownMenu from './components/dropdown';
 import MoreData from './components/moreData';
 import { useState, useEffect } from "react";
-import { Button } from 'reactstrap';
+import { Button, Col } from 'reactstrap';
 import {
   Switch,
   Route,
@@ -47,6 +47,7 @@ function AppWrapper() {
 
   return (
     <div className="App">
+        
       <header className="App-header">
           <div className="logo">
       <a href="/"><img src="https://fontmeme.com/permalink/210803/ba6d2de3d8fcead1e44f4ce21d2fa53c.png" alt="pokemon-font" border="0" /></a>
@@ -72,6 +73,7 @@ function AppWrapper() {
               </section>
         )}
       </header>
+      
     
       <Switch>
         <Route path="/:name">
